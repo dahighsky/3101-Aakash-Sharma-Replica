@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f5f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Header Navbar Styles */
+
+header{
+    width: 100%;
+    background-color: white;
+    position : fixed;
+    top: 0;
+    display : flex;
+    justify-content : space-between;
+    align-items: center;
+}
+ header > span{
+     display: inline-block;
+     margin: 10px;
+ }
+
+ .recording{
+     display: flex;
+     align-items: center;
+     padding: 10px;
+ }
+ .recording * {
+     margin-right: 10px;
+ }
+
+ /* Main Content Window */
+ .mainContent{
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     margin-top: 100px;
+ }
+.mainContent > div{
+    margin: 0 5px;
+}
+ /* Left Bar */
+ .leftBar{
+     width: 350px;
+     height: 500px;
+     display: flex;
+     flex-flow: column;
+ }
+ .leftBar > div {
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+ }
+ /* Custom Scroll Bar */
+.list::-webkit-scrollbar{
+    width: 3px;
+    margin-right: 5px;
+}
+.list::-webkit-scrollbar-track{
+    background-color: none;
+}
+.list::-webkit-scrollbar-thumb{
+    background-color: #cfcfcf;
+    height: 10px;
+}
+.cameraImage{
+    width: 100%;
+}
+.presenters{
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.attendees{
+    height: 300px;
+}
+.heading{
+    font-weight: bold;
+    font-size: larger;
+}
+.presenters > .heading{
+    margin-top: 10px;
+}
+.list{
+    overflow-y: scroll;
+}
+.presenters p,ul>li {
+    padding: 5px;
+}
+
+ /* Shared Screen */
+ .sharedScreen{
+     width: 700px;
+     height: 500px;
+     display: flex;
+     flex-direction: column;
+     background-color: white;
+     border-radius: 10px;
+ }
+ .sharedScreenImage{
+     height: 100%;
+     width: 532px;
+     margin: auto;
+ }
+ .sharedScreen span{
+     margin: 10px;
+ }
+/* Right Bar */
+.rightBar{
+    width: 350px;
+}

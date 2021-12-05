@@ -5,65 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teams</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
+<!-- The top bar-->        
     <header>
-        <span>Teams</span>
-        <span>
+        <span><h3>Teams</h3></span>
+        <span class="recording">
             <img src="recording-icon.png">
             <span>Recording</span>
             <time>00:58:56</time>
         </span>
     </header>
+    
+    <main class="mainContent"><!--main content flexbox-->
 
-    <div class="leftBar">
-        <div>
-            <img src="camera-image.png">
+        <div class="leftBar"><!-- Presenters and attendees bar(left) -->
+            <div>
+                <img src="camera-image.png" class="cameraImage">
+            </div>
+            <div class="presenters">
+                <p class="heading">Presenters</p>
+                <ul class="list">
+                    <li>Abhinab Pratap Singh Chauhan</li>
+                    <li>Vidushi Singh</li>
+                    <li>Abhinab Pratap Singh Chauhan</li>
+                </ul>
+            </div>
+            <div class="attendees">
+                <p class="heading">Presenters</p>
+                <p>Abhinab Pratap Singh Chauhan</p>
+                <p>Vidushi Singh</p>
+                <p>Abhinab Pratap Singh Chauhan</p>
+                <p>Vidushi Singh</p>
+                <p>Abhinab Pratap Singh Chauhan</p>
+                <p>Vidushi Singh</p>
+                <p>Abhinab Pratap Singh Chauhan</p>
+                <p>Vidushi Singh</p>
+                <p>Abhinab Pratap Singh Chauhan</p>
+                <p>Vidushi Singh</p>
+            </div>
         </div>
-        <div class="presenters">
-            <p class="heading">Presenters</p>
-            <p>Abhinab Pratap Singh Chauhan</p>
-            <p>Vidushi Singh</p>
-            <p>Abhinab Pratap Singh Chauhan</p>
-        </div>
-        <div class="attendees">
-            <p class="heading">Presenters</p>
-            <p>Abhinab Pratap Singh Chauhan</p>
-            <p>Vidushi Singh</p>
-            <p>Abhinab Pratap Singh Chauhan</p>
-            <p>Vidushi Singh</p>
-            <p>Abhinab Pratap Singh Chauhan</p>
-            <p>Vidushi Singh</p>
-            <p>Abhinab Pratap Singh Chauhan</p>
-            <p>Vidushi Singh</p>
-            <p>Abhinab Pratap Singh Chauhan</p>
-            <p>Vidushi Singh</p>
-        </div>
-    </div>
 
-    <main class="sharedScreen">
-            <img src="screen-share-icon.png">
-            <span>Abhinab's Screen</span>
+        <div class="sharedScreen"><!--Shared Screen-->
+                <img src="screen-share-icon.png" class="sharedScreenImage">
+                <span>Abhinab's Screen</span>
+        </div>
+
+        <div class="rightBar"><!--Attendee cards (right bar)-->
+            <div class="speakerCard">
+                <div>AC</div>
+                <img src="mic umute-icon.png">
+            </div>
+            <div class="AttendeeCard">
+                <div>AC</div>
+                <img src="mic-icon.png">
+            </div>
+            <div class="AttendeeCard">
+                <div>AC</div>
+                <img src="mic-icon.png">
+            </div>
+            <div class="AttendeeCard">
+                <div>AC</div>
+                <img src="mic-icon.png">
+            </div>
+        </div>
     </main>
-
-    <div class="rightBar">
-        <div class="speakerCard">
-            <div>AC</div>
-            <img src="mic umute-icon.png">
-        </div>
-        <div class="AttendeeCard">
-            <div>AC</div>
-            <img src="mic-icon.png">
-        </div>
-        <div class="AttendeeCard">
-            <div>AC</div>
-            <img src="mic-icon.png">
-        </div>
-        <div class="AttendeeCard">
-            <div>AC</div>
-            <img src="mic-icon.png">
-        </div>
-    </div>
 
     <footer>
         <span>
