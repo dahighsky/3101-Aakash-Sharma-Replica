@@ -148,7 +148,7 @@ header{
 /* Right Bar */
 .rightBar{
     width: 350px;
-    height: 700px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
@@ -229,4 +229,59 @@ header{
 
 .SpeakerCard > div{
     background-color: #aaffd6 !important;
+}
+
+/* Footer Starts */
+footer{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 125px;
+    margin: 10px 20px;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+footer > div{
+    display: flex;
+}
+.option{
+    height: 50px;
+    width: 70px;
+    margin: auto;
+    margin-left: 20px;
+    background-color: #c6c6c6;
+    border: 0px;
+    border-radius: 5px;
+}
+.option:hover{
+    background-color: #aaffd6;
+}
+.option img, .leftBar img{
+    height: 18px;
+}
+
+.leave{
+    height: 50px;
+    width: 140px;
+    margin: auto;
+    margin-right: 20px;
+    background-color: #ff2c2c;
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+    font-size: large;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.leave:hover{
+    width: 150px;
+    height: 53.5714px;
+    transition-duration: 0.7s;
+}
+.leave span{
+    margin-top: auto;
+    margin-bottom: auto;
 }
