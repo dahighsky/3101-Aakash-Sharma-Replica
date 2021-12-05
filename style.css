@@ -4,7 +4,18 @@
 }
 body{
     background-color: #f6f7fb;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+::-webkit-scrollbar{
+    width: 3px;
+}
+::-webkit-scrollbar-track{
+    background-color: none;
+
+}
+::-webkit-scrollbar-thumb{
+    background-color: #cfcfcf;
+    height: 10px;
 }
 /* Header Navbar Styles */
 
@@ -16,10 +27,12 @@ header{
     display : flex;
     justify-content : space-between;
     align-items: center;
+    box-shadow: 5px 0px 10px lightgray;
+    font-size: 15px;
 }
  header > span{
      display: inline-block;
-     margin: 10px;
+     margin: 10px 40px;
  }
 
  .recording{
@@ -29,6 +42,9 @@ header{
  }
  .recording * {
      margin-right: 10px;
+ }
+ .recording>img{
+     height: 22px;
  }
 
  /* Main Content Window */
@@ -44,9 +60,10 @@ header{
  /* Left Bar */
  .leftBar{
      width: 350px;
-     height: 650px!important;
+     height: 640px!important;
      display: flex;
      flex-flow: column;
+    
  }
  .leftBar > div {
     padding: 10px;
@@ -68,9 +85,12 @@ header{
 }
 
 .attendees{
-    height: 276px;
+    height: 266px;
     padding-left: 20px!important;
     padding-right: 30px!important;
+}
+.attendees>ul>li{
+    padding: 7px!important;
 }
 .heading{
     font-weight: bold;
@@ -103,25 +123,49 @@ header{
 
  /* Shared Screen */
  .sharedScreen{
-     width: 700px;
-     height: 650px;
+     width: 750px;
+     height: 640px;
      display: flex;
      box-sizing: border-box;
      flex-direction: column;
      background-color: white;
      background-image: url(screen-share-icon.png);
      background-repeat: no-repeat;
-     background-position: top;
-     background-size: 600px;
+     background-position: center;
+     background-size: 540px;
      border-radius: 8px;
      padding: 10px;
  }
  .sharedScreen span{
-     margin-left: 30px;
+     margin-left: 10px;
      position: absolute;
-     bottom: 20px;
+     bottom: 30px;
+     font-size: larger;
  }
 /* Right Bar */
 .rightBar{
-    width: 350px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.AttendeeCard{
+    box-sizing: border-box;
+    height: 200px;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.AttendeeCard > div{
+    box-sizing: border-box;
+    position: relative;
+    height: 184px;
+    width: 284px;
+    background-color: #c6c6c6;
+    border-radius: 8px;
+    top: 8px;
+    left: 8px;
+}
+.cicleOut{
+    height: 100;
 }
