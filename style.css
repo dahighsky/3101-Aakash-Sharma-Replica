@@ -4,7 +4,7 @@
 }
 body{
     background-color: #f6f7fb;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "poppins", Geneva, Tahoma, sans-serif;
 }
 ::-webkit-scrollbar{
     width: 3px;
@@ -29,6 +29,7 @@ header{
     align-items: center;
     box-shadow: 5px 0px 10px lightgray;
     font-size: 15px;
+    z-index: 69;
 }
  header > span{
      display: inline-block;
@@ -59,7 +60,7 @@ header{
 }
  /* Left Bar */
  .leftBar{
-     width: 350px;
+     width: 330px;
      height: 640px!important;
      display: flex;
      flex-flow: column;
@@ -78,20 +79,22 @@ header{
 
 .presenters{
     height: 100px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 28px;
+    margin-bottom: 14px;
     padding-left: 20px!important;
     padding-right: 30px!important;
 }
 
 .attendees{
-    height: 266px;
+    height: 286px;
     padding-left: 20px!important;
     padding-right: 30px!important;
+    box-sizing: border-box;
 }
-.attendees>ul>li{
-    padding: 7px!important;
+.attendees ul{
+    margin-bottom: 10px;
 }
+
 .heading{
     font-weight: bold;
 }
@@ -104,7 +107,7 @@ header{
     color: #9d9d9d;
 }
 .leftBar>div>p, ul>li {
-    padding: 5px;
+    padding: 4px;
 }
 
  /* Custom Scroll Bar */
@@ -144,28 +147,86 @@ header{
  }
 /* Right Bar */
 .rightBar{
-    width: 300px;
+    width: 350px;
+    height: 700px;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
+}
+.rightBar::-webkit-scrollbar-thumb{
+    visibility: hidden;
 }
 
 .AttendeeCard{
     box-sizing: border-box;
     height: 200px;
+    width: 340px;
     background-color: white;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-bottom: 10px;
 }
 .AttendeeCard > div{
     box-sizing: border-box;
     position: relative;
-    height: 184px;
-    width: 284px;
+    height: 180px;
+    width: 320px;
     background-color: #c6c6c6;
     border-radius: 8px;
-    top: 8px;
-    left: 8px;
+    top: 10px;
+    left: 10px;
 }
-.cicleOut{
-    height: 100;
+.circleOut{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: white;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 30px;
+}
+.circleIn{
+    height: 90px;
+    width: 90px;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow:0px 0px 10px 2px #aaffd6 inset;
+    margin: auto;
+    position: relative;
+    top: 5px;
+}
+
+@keyframes speaker{
+    from {
+        box-shadow: 0px 0px 10px 2px #aaffd6 inset;
+        font-weight: normal;
+    }
+    to {
+        box-shadow: 0px 0px 10px 10px #aaffd6 inset;
+        font-weight: bold;
+    }
+  }
+  
+.SpeakerCircle{
+    animation-name: speaker;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.AC{
+    display: inline-block;
+    position: relative;
+    font-size: xx-large;
+    top: 20px;
+}
+
+.mic{
+    height: 15px;
+    position: relative;
+    bottom: -53px;
+    left: 10px;
+}
+
+.SpeakerCard > div{
+    background-color: #aaffd6 !important;
 }
