@@ -505,8 +505,8 @@ footer > div{
         width: 90%;
         justify-content: center;
     }
-    leave:hover{
-        width: 100%;
+    .leave:hover{
+        width: 100% ;
     }
     .presenterName{
         order: 3;
