@@ -337,7 +337,6 @@ footer > div{
     }
     .option:hover{
         background-color: #aaffd6;
-        height: 35px;
         transition-duration: 00.7s;
     }
     .leave{
