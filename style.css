@@ -40,6 +40,7 @@ header{
      display: flex;
      align-items: center;
      padding: 10px;
+     margin-left: auto;
  }
  .recording * {
      margin-right: 10px;
@@ -60,8 +61,8 @@ header{
 }
  /* Left Bar */
  .leftBar{
-     width: 330px;
-     height: 640px!important;
+     width: 340px;
+     height: fit-content;
      display: flex;
      flex-flow: column;
     
@@ -145,8 +146,8 @@ header{
  }
  .sharedScreen span{
      margin-left: 10px;
-     position: absolute;
-     bottom: 30px;
+     position: relative;
+     bottom: -580px;
      font-size: larger;
  }
 /* Right Bar */
@@ -156,6 +157,7 @@ header{
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
+    align-content: space-between;
 }
 .rightBar::-webkit-scrollbar-thumb{
     visibility: hidden;
@@ -164,20 +166,18 @@ header{
 .AttendeeCard{
     box-sizing: border-box;
     height: 200px;
-    width: 340px;
+    width: 330px;
     background-color: white;
     border-radius: 10px;
     margin-bottom: 10px;
+    padding: 10px;
 }
 .AttendeeCard > div{
     box-sizing: border-box;
-    position: relative;
     height: 180px;
-    width: 320px;
+    width: 310px;
     background-color: #c6c6c6;
     border-radius: 8px;
-    top: 10px;
-    left: 10px;
 }
 .circleOut{
     height: 100px;
@@ -213,7 +213,7 @@ header{
   
 .SpeakerCircle{
     animation-name: speaker;
-    animation-duration: 2s;
+    animation-duration: 1.4s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -230,9 +230,20 @@ header{
     bottom: -53px;
     left: 10px;
 }
-
+@keyframes speakerBox{
+    from {
+        background-color: #aaffd6;
+    }
+    to {
+        background-color: #c6c6c6;
+    }
+}
 .SpeakerCard > div{
-    background-color: #aaffd6 !important;
+    background-color: #aaffd6;
+    animation-name: speakerBox;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 /* Footer Starts */
@@ -240,6 +251,7 @@ footer{
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     background-color: white;
     height: 125px;
     margin: 10px 20px;
@@ -261,8 +273,10 @@ footer > div{
 }
 .option:hover{
     background-color: #aaffd6;
+    height: 55px;
+    transition-duration: 00.7s;
 }
-.option img,{
+.option img{
     height: 18px;
 }
 
@@ -292,3 +306,197 @@ footer > div{
     align-items: center;
     margin: auto;
 }
+
+/* Responsiveness Queries */
+@media screen and (max-width: 1480px) {
+    .rightBar{
+        flex-direction: row;
+        width: 100%;
+        height: max-content;
+    }
+    .AttendeeCard{
+        margin-top: 20px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+    }
+  }
+@media screen and (max-width: 1130px) {
+    .leftBar{
+        width: 250px;
+    }
+    .attendees{
+        height: 330px;
+    }
+    .sharedScreen {
+        width: 500px;
+        background-size: 450px;
+    }
+    .option{
+        width: 60px;
+        height: 30px;
+    }
+    .option:hover{
+        background-color: #aaffd6;
+        height: 35px;
+        transition-duration: 00.7s;
+    }
+    .leave{
+        height: 30px;
+        width: 100px;
+    }
+    .leave>img{
+        height: 18px;
+    }
+    .leave:hover{
+        width: 110px;
+        height: 40px;
+        transition-duration: 0.7s;
+    }
+    .presenterName{
+        font-size: smaller;
+    }
+  }
+  @media screen and (max-width: 780px) {
+    .leftBar{
+        order: 2;
+        width: 190px;
+        font-size: smaller;
+        height: fit-content;
+    }
+    .presenters{
+        margin: 10px 0px;
+        padding-right: 0px;
+        height: 85px;
+    }
+    .attendees{
+        height: 140px;
+    }
+    .cameraImageDiv{
+        margin-top: 20px;
+    }
+    .sharedScreen {
+        order: 1;
+        width: 90%;
+    }
+    .rightBar{
+        flex-direction: column;
+        width: auto;
+        height: 400px;
+        order: 3;
+    }
+    .SpeakerCard{
+        margin-top: 20px!important ;
+    }
+    .AttendeeCard{
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+        
+        height: 170px;
+        width: 190px;
+    }
+    .AttendeeCard > div{
+        height: 150px;
+        width: 170px;
+    }
+    .mic{
+        bottom: -20px;
+    }
+    footer{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .options{
+        justify-content: space-between;
+    }
+    .presenterName{
+        visibility: collapse;
+    }
+    .leave{
+        margin-right: auto;
+    }
+  }
+  @media screen and (max-width: 422px) {
+    .leftBar{
+        width: 90%;
+        order: 3;
+    }
+    .rightBar{
+        width: 90%;
+        height: fit-content;
+        flex-direction: row;
+        order: 1;
+    }
+    .sharedScreen{
+        order: 2;
+        background-size: 90%;
+        height: 400px;
+    }
+    .sharedScreen > span{
+        bottom: -345px;
+    }
+    .AttendeeCard{
+        width: 75px;
+        height: 60px;
+        margin-top: 0px !important;
+    }
+    .AttendeeCard>div{
+        width: 48px;
+        height: 38.4px;
+        display: inline-block;
+        position: relative;
+    }
+    .circleOut{
+        height: 30px;
+        width: 30px;
+        border-radius: 50px;
+        background-color: white;
+        text-align: center;
+        margin: auto;
+        position: relative;
+        top: 5px;
+    }
+    .circleIn{
+        height: 25px;
+        width: 25px;
+        border-radius: 50px;
+        background-color: white;
+        box-shadow:0px 0px 10px 2px #aaffd6 inset;
+        margin: auto;
+        position: relative;
+        top: 2.5px;
+    }
+    .AC{
+        position: relative;
+        font-size: smaller;
+        top: -1px;
+    }
+    
+    .mic{
+        height: 8px;
+        position: relative;
+        bottom: 12px;
+        left: 4px;
+    }
+    footer{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .options{
+        flex-wrap: wrap;
+        order: 1;
+    }
+    .option{
+        margin-bottom: 10px;
+        width: 50px;
+    }
+    .leave{
+        order: 2;
+        width: 100%;
+        justify-content: center;
+    }
+    .presenterName{
+        order: 3;
+    }
+  }
