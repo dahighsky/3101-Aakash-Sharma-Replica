@@ -75,6 +75,7 @@ header{
  }
 .cameraImage{
     width: 100%;
+    height: auto;
 }
 
 .presenters{
@@ -109,7 +110,10 @@ header{
 .leftBar>div>p, ul>li {
     padding: 4px;
 }
-
+.list>li:hover{
+    background-color: #9d9d9d;
+    color: white;
+}
  /* Custom Scroll Bar */
  .list::-webkit-scrollbar{
     width: 3px;
@@ -258,7 +262,7 @@ footer > div{
 .option:hover{
     background-color: #aaffd6;
 }
-.option img, .leftBar img{
+.option img,{
     height: 18px;
 }
 
@@ -281,7 +285,10 @@ footer > div{
     height: 53.5714px;
     transition-duration: 0.7s;
 }
-.leave span{
-    margin-top: auto;
-    margin-bottom: auto;
+.presenterName{
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
 }
