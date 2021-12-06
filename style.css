@@ -346,7 +346,7 @@ footer > div{
         height: 18px;
     }
     .leave:hover{
-        width: 110px;
+        width: 100%;
         height: 40px;
         transition-duration: 0.7s;
     }
