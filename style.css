@@ -340,13 +340,13 @@ footer > div{
     }
     .leave{
         height: 30px;
-        width: 100px;
+        width: 110px;
     }
     .leave>img{
         height: 18px;
     }
     .leave:hover{
-        width: 100%;
+        width: 120px;
         height: 40px;
         transition-duration: 0.7s;
     }
@@ -406,6 +406,10 @@ footer > div{
     }
     .options{
         justify-content: space-between;
+        width: 100%;
+    }
+    .option{
+        margin: auto auto;
     }
     .presenterName{
         visibility: collapse;
@@ -413,8 +417,14 @@ footer > div{
     .leave{
         margin-right: auto;
     }
+    .leave:hover{
+        height: 30px;
+    }
   }
   @media screen and (max-width: 422px) {
+    .mainContent{
+        margin-top: 70px;
+    }
     .leftBar{
         width: 90%;
         order: 3;
@@ -484,6 +494,7 @@ footer > div{
     .options{
         flex-wrap: wrap;
         order: 1;
+        width: 100%;
     }
     .option{
         margin-bottom: 10px;
@@ -491,8 +502,11 @@ footer > div{
     }
     .leave{
         order: 2;
-        width: 100%;
+        width: 90%;
         justify-content: center;
+    }
+    leave:hover{
+        width: 100%;
     }
     .presenterName{
         order: 3;
