@@ -273,7 +273,6 @@ footer > div{
 }
 .option:hover{
     background-color: #aaffd6;
-    height: 55px;
     transition-duration: 00.7s;
 }
 .option img{
